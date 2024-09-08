@@ -1,4 +1,4 @@
-name: Deploy To EC2
+name: Deploy to EC2
 
 on:
   push:
@@ -23,4 +23,4 @@ jobs:
           npm install
           npm run build --production
           sudo cp -R build/ /var/www/vhosts/frontend/
-          sudo service nginx restart
+          sudo service nginx restart  
