@@ -1,4 +1,4 @@
-name: Deploy to Ec2 
+name: Deploy To EC2
 
 on:
   push:
@@ -18,9 +18,9 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          cd /home/ubuntu/github-actions-cicd-react-aws-ec2.git
+          cd /home/ubuntu/github-actions-cicd-react-aws-ec2
           git pull origin main
           npm install
           npm run build --production
           sudo cp -R build/ /var/www/vhosts/frontend/
-          sudo service nginx restart        
+          sudo service nginx restart
